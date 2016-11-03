@@ -162,8 +162,8 @@ def bind_api(**config):
                                         n = datetime.datetime.now()
                                         d = n + datetime.timedelta(seconds=sleep_time)
                                         print("Rate limit reached.")
-                                        print("Went to sleep at ", n)
-                                        print("Service will return at ", d)
+                                        print("Went to sleep at ", n.strftime('%Y-%m-%d %H:%M:%S'))
+                                        print("Service will return at ", d.strftime('%Y-%m-%d %H:%M:%S'))
                                     time.sleep(sleep_time + 5)  # sleep for few extra sec
 
                 # if self.wait_on_rate_limit and self._reset_time is not None and \
